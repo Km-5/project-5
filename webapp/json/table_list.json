@@ -1,0 +1,20 @@
+{
+    "TableList": [
+        {
+            "key": "oDocPack",
+            "text": "Document Pack"
+        },
+        {
+            "key": "oDocList",
+            "text": "Document List"
+        },
+        {
+            "key": "oDocExtract",
+            "text": "Document Extraction"
+        },
+        {
+            "key": "oDocNote",
+            "text": "Document Note"
+        }
+    ]
+}        

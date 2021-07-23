@@ -1,0 +1,67 @@
+<core:FragmentDefinition
+xmlns="sap.m"
+xmlns:f="sap.ui.layout.form"
+xmlns:l="sap.ui.layout"
+xmlns:core="sap.ui.core">
+    <Dialog id="openDialog2" title="Dialog box">
+    <VBox class="sapUiSmallMargin">
+    <f:SimpleForm
+         id="SimpleFormDisplay"
+         editable="true"
+         layout="ResponsiveGridLayout"
+         title="Change the data"
+         labelSpanXL="3"
+     labelSpanL="3"
+         labelSpanM="3"
+         labelSpanS="12"
+         adjustLabelSpan="false"
+         emptySpanXL="4"
+         emptySpanL="4"
+         emptySpanM="4"
+         emptySpanS="0"
+     columnsXL="1"
+         columnsL="1"
+         columnsM="1"
+         singleContainerFullSize="false">
+    <f:content>
+                <Label text="PackageId "/>
+                <Input id="ipPackageId" value="{doc_list>PackageId}" editable="false"/>
+                <Label text="JobId"/>
+				<Input id="ipJobId" value="{doc_list>JobId}" />
+				<Label text="ClientId" />
+				<Input id="ipClientId" value="{doc_list>ClientId}"/>
+                <Label text="FileName" />
+				<Input id="ipFileName" value="{doc_list>FileName}"/>
+                <Label text="DocumentType"/>
+				<Input id="ipDocumentType" value="{doc_list>DocumentType}" />
+                <Label text="IsMain"/>
+				<Input id="ipIsMain" value="{doc_list>IsMain}" />
+                <Label text="DocCategory"/>
+				<Input id="ipDocCategory" value="{doc_list>DocCategory}" />
+                <Label text="CreatedAt"/>
+				<Input id="ipCreatedAt" value="{doc_list>CreatedAt}" />
+                <Label text="CreatedBy"/>
+				<Input id="ipCreatedBy" value="{doc_list>CreatedBy}" />
+                 <Label text="Status"/> 
+				<Input id="ipStatus" value="{doc_list>Status}" />
+                <Label text="Flag"/> 
+				<Input id="ipFlag" value="{doc_list>Flag}" />
+                <Label text="UpdatedAt"/> 
+				<Input id="ipUpdatedAt" value="{doc_list>UpdatedAt}" />
+                <Label text="UpdatedBy"/> 
+				<Input id="ipUpdatedBy" value="{doc_list>UpdatedBy}" />
+                <Label text="ObjectStoreRef"/> 
+				<Input id="ipObjectStoreRef" value="{doc_list>ObjectStoreRef}" />
+                <Label text="Confidence"/> 
+				<Input id="ipConfidence" value="{doc_list>Confidence}" />
+                <Label text="SupportingDoc"/> 
+				<Input id="ipSupportingDoc" value="{doc_list>SupportingDoc}" />
+    </f:content>
+    </f:SimpleForm>
+    </VBox>
+<buttons>
+    <Button text="Update" press=".updateDialog"/>
+    <Button text="Cancel" press=".closeDialog"/>
+</buttons>
+</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,85 @@
+<mvc:View
+    controllerName="demoApp5.project5.controller.DocPack"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m">
+
+	<Page id="page" title="{i18n>DocPackTitle}" showNavButton="true" navButtonPress=".onNavBack">
+		<content >
+                       
+            <Table id="idDocPackTable" growing="true" growingThreshold="10"
+                   items="{path:'doc_pack>/DocumentPack'}">
+                <columns>
+                            <Column hAlign="Begin">
+                                <Text text="PackageId" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="Status" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="CreatedAt" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="CreatedBy" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="UpdatedAt" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="UpdatedBy" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="LockedAt" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="LockedBy" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="AssignedTo" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="Flag" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="Edit" />
+                            </Column>
+                </columns>
+
+
+                <items>
+                    <ColumnListItem type="Active">
+                        <cells>
+                        
+                               <ObjectIdentifier id="PackageId" text="{doc_pack>PackageId}"/>
+                               <Text id="Status" text="{doc_pack>Status}"></Text>
+                               <Text id="CreatedAt" text="{doc_pack>CreatedAt}"></Text>
+                               <Text id="CreatedBy" text="{doc_pack>CreatedBy}"></Text>
+                               <Text id="UpdatedAt" text="{doc_pack>UpdatedAt}"></Text>
+                               <Text id="UpdatedBy" text="{doc_pack>UpdatedBy}"></Text>
+                               <Text id="LockedAt" text="{doc_pack>LockedAt}"></Text>
+                               <Text id="LockedBy" text="{doc_pack>LockedBy}"></Text>
+                               <Text id="AssignedTo" text="{doc_pack>AssignedTo}"></Text>
+                               <Text id="Flag" text="{doc_pack>Flag}"></Text>
+                               <Button xmlns="sap.m" 
+                                       id="button0"
+                                       icon="sap-icon://edit"
+                                       press="onbuttonpress"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+            </Table>
+        </content>
+
+                <footer>
+			      <OverflowToolbar id="otbFooter">
+                   <ToolbarSpacer />
+                        <Button text="Save all" press="onSaveAll">
+					       <layoutData>
+						    <OverflowToolbarLayoutData/>
+					       </layoutData>
+				        </Button>
+			      </OverflowToolbar>
+		        </footer>
+	</Page>
+</mvc:View>

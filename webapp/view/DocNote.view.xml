@@ -1,0 +1,71 @@
+<mvc:View
+    controllerName="demoApp5.project5.controller.DocNote"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>		
+	<Page id="page" title="{i18n>DocNoteTitle}" showNavButton="true" navButtonPress=".onNavBack">
+		<content >                       
+           <Table  id="idDocNoteTable" growing="true" growingThreshold="10"
+                      items="{path:'doc_notes>/DocumentNotes'}">
+                <columns>
+                            <Column hAlign="Begin">
+                                <Text text="PackageId" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="SeqNo" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="CreatedAt" />
+                            </Column>
+                             <Column	hAlign="Begin">
+                                <Text text="CreatedBy" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="Subject" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="Note" />
+                            </Column>
+                            
+                            <Column	hAlign="Begin">
+                                <Text text="Edit" />
+                            </Column>
+                </columns>
+
+
+                <items>
+                    <ColumnListItem type="Active" id="item0">
+                        <cells>
+                        
+                               <ObjectIdentifier id="PackageId" text="{doc_notes>PackageId}"/>
+                               <Text id="SeqNo" text="{doc_notes>SeqNo}"></Text>
+                               <Text id="CreatedAt" text="{doc_notes>CreatedAt}"></Text>
+                               <Text id="CreatedBy" text="{doc_notes>CreatedBy}"></Text>
+                               <Text id="Subject" text="{doc_notes>Subject}"></Text>
+                               <Text id="Note" text="{doc_notes>Note}"></Text>
+                             
+                               <Button xmlns="sap.m" 
+                                       id="button0"
+                                       icon="sap-icon://edit"
+                                       press="onbuttonpress"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+            </Table>
+        </content>
+
+        <footer>
+			<OverflowToolbar id="otbFooter">
+                <ToolbarSpacer />
+                    <Button text="Save all" press="onSaveAll">
+					    <layoutData>
+						    <OverflowToolbarLayoutData/>
+					    </layoutData>
+				    </Button>
+			 </OverflowToolbar>
+		 </footer>
+	</Page>
+				
+</mvc:View>

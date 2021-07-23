@@ -1,0 +1,77 @@
+<mvc:View
+    controllerName="demoApp5.project5.controller.DocExtract"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+		<Page id="page" title="{i18n>DocExtractTitle}" showNavButton="true" navButtonPress=".onNavBack">
+			<content >                       
+                <Table id="idDocExtractTable" growing="true" growingThreshold="10"
+                       items="{path:'doc_extract>/DocumentExtraction'}">
+                    <columns>
+                            <Column hAlign="Begin">
+                                <Text text="PackageId" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="SeqNo" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="Metadata" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="Flag" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="CreatedOn" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="UpdatedOn" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="CreatedBy" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="UpdatedBy" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="Edit" />
+                            </Column>
+                    </columns>
+
+
+                    <items>
+                        <ColumnListItem type="Active" id="item0">
+                            <cells>
+                        
+                               <ObjectIdentifier id="PackageId" text="{doc_extract>PackageId}"/>
+                               <Text id="SeqNo" text="{doc_extract>SeqNo}"></Text>
+                               <Text id="Metadata" text="{doc_extract>Metadata}"></Text>
+                               <Text id="Flag" text="{doc_extract>Flag}"></Text>
+                               <Text id="CreatedOn" text="{doc_extract>CreatedOn}"></Text>
+                               <Text id="UpdatedOn" text="{doc_extract>UpdatedOn}"></Text>
+                               <Text id="CreatedBy" text="{doc_extract>CreatedBy}"></Text>
+                               <Text id="UpdatedBy" text="{doc_extract>UpdatedBy}"></Text>
+                               
+                               <Button xmlns="sap.m" 
+                                       id="button0"
+                                       icon="sap-icon://edit"
+                                       press="onbuttonpress"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+
+                     </Table>
+                    </content>
+
+                <footer>
+			      <OverflowToolbar id="otbFooter">
+                    <ToolbarSpacer />
+                        <Button text="Save all" press="onSaveAll">
+					       <layoutData>
+						    <OverflowToolbarLayoutData/>
+					       </layoutData>
+				        </Button>
+			      </OverflowToolbar>
+		        </footer>
+				</Page>
+</mvc:View>

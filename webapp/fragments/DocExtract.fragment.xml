@@ -1,0 +1,52 @@
+<core:FragmentDefinition
+xmlns="sap.m"
+xmlns:f="sap.ui.layout.form"
+xmlns:l="sap.ui.layout"
+xmlns:core="sap.ui.core">
+    <Dialog id="openDialog3" title="Dialog box">
+    <VBox class="sapUiSmallMargin">
+    <f:SimpleForm
+         id="SimpleFormDisplay"
+         editable="true"
+         layout="ResponsiveGridLayout"
+         title="Change the data"
+         labelSpanXL="3"
+     labelSpanL="3"
+         labelSpanM="3"
+         labelSpanS="12"
+         adjustLabelSpan="false"
+         emptySpanXL="4"
+         emptySpanL="4"
+         emptySpanM="4"
+         emptySpanS="0"
+     columnsXL="1"
+         columnsL="1"
+         columnsM="1"
+         singleContainerFullSize="false">
+    <f:content>
+                <Label text="PackageId "/>
+                <Input id="ipPackageId" value="{doc_extract>PackageId}" editable="false"/>
+                <Label text="SeqNo"/>
+				<Input id="ipSeqNo" value="{doc_extract>SeqNo}" />
+				<Label text="Metadata" />
+				<Input id="ipMetadata" value="{doc_extract>Metadata}"/>
+                <Label text="Flag"/>
+				<Input id="ipFlag" value="{doc_extract>Flag}" />
+                <Label text="CreatedOn"/>
+				<Input id="ipCreatedOn" value="{doc_extract>CreatedOn}" />
+                <Label text="UpdatedOn"/>
+				<Input id="ipUpdatedOn" value="{doc_extract>UpdatedOn}" />
+                <Label text="CreatedBy"/>
+				<Input id="ipCreatedBy" value="{doc_extract>CreatedBy}" />
+                <Label text="UpdatedBy"/>
+				<Input id="ipUpdatedBy" value="{doc_extract>UpdatedBy}" />
+                
+    </f:content>
+    </f:SimpleForm>
+    </VBox>
+<buttons>
+    <Button text="Update" press=".updateDialog"/>
+    <Button text="Cancel" press=".closeDialog"/>
+</buttons>
+</Dialog>
+</core:FragmentDefinition>

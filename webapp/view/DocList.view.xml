@@ -1,0 +1,111 @@
+<mvc:View
+    controllerName="demoApp5.project5.controller.DocList"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m">
+
+	<Page id="page" title="{i18n>DocListTitle}" showNavButton="true" navButtonPress=".onNavBack">
+		<content >
+                       
+            <Table id="idDocListTable" growing="true" growingThreshold="10"
+                   items="{path:'doc_list>/DocumentList'}">
+                    <columns>
+                            <Column hAlign="Begin">
+                                <Text text="PackageId" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="JobId" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="ClientId" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="FileName" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="DocumentType" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="IsMain" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="DocCategory" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="CreatedAt" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="CreatedBy" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="Status" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="Flag" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="UpdatedAt" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="UpdatedBy" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="ObjectStoreRef" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="Confidence" />
+                            </Column>
+                            <Column	hAlign="Begin">
+                                <Text text="SupportingDoc" />
+                            </Column>
+                            
+                            <Column	hAlign="Begin">
+                                <Text text="Edit" />
+                            </Column>
+                    </columns>
+
+
+                    <items>
+                        <ColumnListItem type="Active" id="item0">
+                             <cells>
+                        
+                               <ObjectIdentifier id="PackageId" text="{doc_list>PackageId}"/>
+                               <Text id="JobId" text="{doc_list>JobId}"></Text>
+                               <Text id="ClientId" text="{doc_list>ClientId}"></Text>
+                               <Text id="FileName" text="{doc_list>FileName}"></Text>
+                               <Text id="DocumentType" text="{doc_list>DocumentType}"></Text>
+                               <Text id="IsMain" text="{doc_list>IsMain}"></Text>
+                               <Text id="DocCategory" text="{doc_list>DocCategory}"></Text>
+                               <Text id="CreatedAt" text="{doc_list>CreatedAt}"></Text>
+                               <Text id="CreatedBy" text="{doc_list>CreatedBy}"></Text>
+                               <Text id="Status" text="{doc_list>Status}"></Text>
+                               <Text id="Flag" text="{doc_list>Flag}"></Text>
+                               <Text id="UpdatedAt" text="{doc_list>UpdatedAt}"></Text>
+                               <Text id="UpdatedBy" text="{doc_list>UpdatedBy}"></Text>
+                               <Text id="ObjectStoreRef" text="{doc_list>ObjectStoreRef}"></Text>
+                               <Text id="Confidence" text="{doc_list>Confidence}"></Text>
+                               <Text id="SupportingDoc" text="{doc_list>SupportingDoc}"></Text>
+                               <Button xmlns="sap.m" 
+                                       id="button0"
+                                       icon="sap-icon://edit"
+                                       press="onbuttonpress"/>
+                             </cells>
+                        </ColumnListItem>
+                    </items>
+
+            </Table>
+        </content>
+
+                <footer>
+			      <OverflowToolbar id="otbFooter">
+                        <ToolbarSpacer />
+                        <Button text="Save all" press="onSaveAll">
+					       <layoutData>
+						    <OverflowToolbarLayoutData/>
+					       </layoutData>
+				        </Button>
+			      </OverflowToolbar>
+		        </footer>
+	</Page>
+	
+</mvc:View>

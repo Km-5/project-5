@@ -1,0 +1,56 @@
+<core:FragmentDefinition
+xmlns="sap.m"
+xmlns:f="sap.ui.layout.form"
+xmlns:l="sap.ui.layout"
+xmlns:core="sap.ui.core">
+    <Dialog id="openDialog1" title="Dialog box">
+    <VBox class="sapUiSmallMargin">
+    <f:SimpleForm
+         id="SimpleFormDisplay"
+         editable="true"
+         layout="ResponsiveGridLayout"
+         title="Change the data"
+         labelSpanXL="3"
+     labelSpanL="3"
+         labelSpanM="3"
+         labelSpanS="12"
+         adjustLabelSpan="false"
+         emptySpanXL="4"
+         emptySpanL="4"
+         emptySpanM="4"
+         emptySpanS="0"
+     columnsXL="1"
+         columnsL="1"
+         columnsM="1"
+         singleContainerFullSize="false">
+    <f:content>
+    
+                <Label text="PackageId "/>
+                <Input id="ipPackageId" value="{doc_pack>PackageId}" editable="false"/>
+                <Label text="Status"/>
+				<Input id="ipStatus" value="{doc_pack>Status}" />
+				<Label text="CreatedAt" />
+				<Input id="ipCreatedAt" value="{doc_pack>CreatedAt}"/>
+                <Label text="CreatedBy" />
+				<Input id="ipCreatedBy" value="{doc_pack>CreatedBy}"/>
+                <Label text="UpdatedAt"/>
+				<Input id="ipUpdatedAt" value="{doc_pack>UpdatedAt}" />
+                <Label text="UpdatedBy"/>
+				<Input id="ipUpdatedBy" value="{doc_pack>UpdatedBy}" />
+                <Label text="LockedAt"/>
+				<Input id="ipLockedAt" value="{doc_pack>LockedAt}" />
+                <Label text="LockedBy"/>
+				<Input id="ipLockedBy" value="{doc_pack>LockedBy}" />
+                <Label text="AssignedTo"/>
+				<Input id="ipAssignedTo" value="{doc_pack>AssignedTo}" />
+                 <Label text="Flag"/> 
+				<Input id="ipFlag" value="{doc_pack>Flag}" />
+    </f:content>
+    </f:SimpleForm>
+    </VBox>
+<buttons>
+    <Button text="Update" press=".updateDialog"/>
+    <Button text="Cancel" press=".closeDialog"/>
+</buttons>
+</Dialog>
+</core:FragmentDefinition>

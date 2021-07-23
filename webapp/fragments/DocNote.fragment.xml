@@ -1,0 +1,49 @@
+<core:FragmentDefinition
+xmlns="sap.m"
+xmlns:f="sap.ui.layout.form"
+xmlns:l="sap.ui.layout"
+xmlns:core="sap.ui.core">
+    <Dialog id="openDialog4" title="Dialog box">
+    <VBox class="sapUiSmallMargin">
+    <f:SimpleForm
+         id="SimpleFormDisplay"
+         editable="true"
+         layout="ResponsiveGridLayout"
+         title="Change the data"
+         labelSpanXL="3"
+     labelSpanL="3"
+         labelSpanM="3"
+         labelSpanS="12"
+         adjustLabelSpan="false"
+         emptySpanXL="4"
+         emptySpanL="4"
+         emptySpanM="4"
+         emptySpanS="0"
+     columnsXL="1"
+         columnsL="1"
+         columnsM="1"
+         singleContainerFullSize="false">
+    <f:content>
+                <Label text="PackageId "/>
+                <Input id="ipPackageId" value="{doc_notes>PackageId}" editable="false"/>
+                <Label text="SeqNo"/>
+				<Input id="ipSeqNo" value="{doc_notes>SeqNo}" />
+				<Label text="CreatedAt" />
+				<Input id="ipCreatedAt" value="{doc_notes>CreatedAt}"/>
+                <Label text="CreatedBy"/>
+				<Input id="ipCreatedBy" value="{doc_notes>CreatedBy}" />
+                <Label text="Subject"/>
+				<Input id="ipSubject" value="{doc_notes>Subject}" />
+                <Label text="Note"/>
+				<Input id="ipNote" value="{doc_notes>Note}" />
+               
+                
+    </f:content>
+    </f:SimpleForm>
+    </VBox>
+<buttons>
+    <Button text="Update" press=".updateDialog"/>
+    <Button text="Cancel" press=".closeDialog"/>
+</buttons>
+</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,46 @@
+{
+	"DocumentExtraction": [
+		{             
+            "PackageId": "100",
+            "SeqNo": "1",
+            "Metadata": "",
+            "Flag": "X",
+            "CreatedOn": "20apr",
+            "UpdatedOn": "21apr",
+            "CreatedBy": "abc",
+            "UpdatedBy": "xyz"
+        },
+        {             
+            "PackageId": "200",
+            "SeqNo": "4",
+            "Metadata": "",
+            "Flag": "",
+            "CreatedOn": "20apr",
+            "UpdatedOn": "21apr",
+            "CreatedBy": "abc",
+            "UpdatedBy": "xyz"
+        },
+        {             
+            "PackageId": "300",
+            "SeqNo": "2",
+            "Metadata": "",
+            "Flag": "x",
+            "CreatedOn": "20apr",
+            "UpdatedOn": "21apr",
+            "CreatedBy": "abc",
+            "UpdatedBy": "xyz"
+        },
+        {             
+            "PackageId": "400",
+            "SeqNo": "1",
+            "Metadata": "",
+            "Flag": "x",
+            "CreatedOn": "20apr",
+            "UpdatedOn": "21apr",
+            "CreatedBy": "abc",
+            "UpdatedBy": "xyz"
+        }
+
+    ]
+    
+}   
